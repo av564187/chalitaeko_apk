@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 // Editar las preferencias compartidas
         val editor = sharedPref.edit()
 // Almacenar una variable (por ejemplo, un entero)
-        var miVariable: String = "eko_pathtraversal-08b2c406-685e-11ee-8c99-0242ac120002"
+        var miVariable: String = "eko_pathtraversal-08b2c406-685e-11ee-8c99"
         editor.putString("token", miVariable)
 // Aplicar los cambios
         editor.apply()
