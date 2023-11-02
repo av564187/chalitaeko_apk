@@ -83,15 +83,7 @@ class SuanfonsonProvider : ContentProvider() {
                     Log.d("SuanfonsonProvider", "No se encontraron archivos en la carpeta.")
                     resultCursor = null
                 }
-            //} else {
-            //    Log.d("SuanfonsonProvider", "Carpeta no encontrada: $folderDir")
-            //    resultCursor = null
-            //}
-        //} else {
-            // URI no contiene información sobre la ubicación de los archivos
-        //    Log.d("SuanfonsonProvider", "URI no contiene información sobre la ubicación de los archivos")
-        //    resultCursor = null
-        //}
+
 
         return resultCursor
     }
@@ -110,28 +102,6 @@ class SuanfonsonProvider : ContentProvider() {
         }
         return content.toString()
     }
-
-
-    /**        val context = context ?: return null
-        val filesDir = context.filesDir
-        Log.d(MainActivity.toString(), "URI... $filesDir")
-        val resultCursor: Cursor?
-
-        // Lista de archivos en la carpeta /files de la aplicación
-        val files = filesDir.listFiles()
-
-        // Crea un cursor con las columnas que desees mostrar en los resultados
-        val cursor = MatrixCursor(arrayOf("_id", "file_name"))
-
-        // Recorre la lista de archivos y agrega cada archivo al cursor
-        for ((index, file) in files.withIndex()) {
-            cursor.addRow(arrayOf(index, file.name))
-        }
-
-        // Asigna el cursor de resultados al cursor de retorno
-        resultCursor = cursor
-
-        return resultCursor **/
 
     override fun update(
         uri: Uri, values: ContentValues?, selection: String?,
